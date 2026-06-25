@@ -96,9 +96,23 @@ def main():
         # Load and display logo
         try:
             logo_path = src_path / "assets" / "logo.png"
+            import base64
             with open(logo_path, "rb") as f:
-                logo_bytes = f.read()
-            st.image(logo_bytes, use_container_width=True)
+                encoded = base64.b64encode(f.read()).decode()
+            
+            st.markdown(
+                f"""
+                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 25px; margin-top: 10px;">
+                    <img src="data:image/png;base64,{encoded}" 
+                         style="width: 55px; height: 55px; border-radius: 50%; object-fit: cover; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
+                    <div style="font-weight: 700; font-size: 1.1rem; line-height: 1.2;">
+                        IBM Granite<br>
+                        <span style="color: #2E9BFF; font-size: 0.85rem; font-weight: 600;">Soccer Analyst</span>
+                    </div>
+                </div>
+                """,
+                unsafe_allow_html=True
+            )
         except Exception as e:
             st.sidebar.error(f"Logo error: {e}. Path looked for: {logo_path.absolute()}")
             
