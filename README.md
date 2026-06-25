@@ -180,4 +180,4 @@ For questions or feedback, please open an issue on GitHub.
 
 ---
 
-**Built with ❤️ using Python, Streamlit, and IBM Granite AI**
+**Built with using Python, Streamlit, and IBM Granite AI**
