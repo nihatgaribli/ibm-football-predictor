@@ -222,6 +222,10 @@ def plot_voronoi_3d(
         ))
 
     # --- AI insight overlays ---
+    import streamlit as st
+    is_light = st.session_state.get('theme_mode', 'dark') == 'light'
+    text_col = '#1e293b' if is_light else 'white'
+
     if shot_xy is not None:
         sx0, sy0 = float(shot_xy[0]), float(shot_xy[1])
         gx, gy = PITCH_LENGTH, PITCH_WIDTH / 2
@@ -235,9 +239,6 @@ def plot_voronoi_3d(
             sizemode='absolute', sizeref=4, anchor='tip',
             colorscale=[[0, '#ffffff'], [1, '#ffffff']], showscale=False,
             hoverinfo='skip'))
-        import streamlit as st
-        is_light = st.session_state.get('theme_mode', 'dark') == 'light'
-        text_col = '#1e293b' if is_light else 'white'
         
         fig.add_trace(go.Scatter3d(
             x=[sx0], y=[sy0], z=[Z_PIN_TOP], mode='markers+text',
