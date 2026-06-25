@@ -382,6 +382,22 @@ def get_theme_css(theme: str = 'dark') -> str:
         text-transform: uppercase; color: rgba(71, 85, 105, 0.9);
         margin: 0.4rem 0 0.2rem 0;
     }
+
+    /* Responsive Adjustments for Mobile */
+    @media (max-width: 768px) {
+        .main-header { font-size: 2.2rem; background-size: 300% auto; margin-top: 1rem; }
+        .sub-header { font-size: 0.95rem; margin-bottom: 1rem; padding: 0 10px; }
+        .badge { padding: 0.25rem 0.6rem; font-size: 0.7rem; margin: 0.2rem; }
+        .badge-row { margin-bottom: 1rem; }
+        [data-testid="stMetricValue"] { font-size: 1.1rem !important; }
+        .explanation-box { padding: 1rem; font-size: 0.85rem; margin-top: 0.4rem; }
+        .legend-card { padding: 0.8rem 1rem; font-size: 0.8rem; line-height: 1.6; }
+        .footer-text { padding: 1rem; font-size: 0.8rem; }
+        .insight-card { padding: 0.8rem 1rem; }
+        .insight-card .ic-value { font-size: 1.2rem; }
+        .insight-card .ic-icon { font-size: 1.1rem; }
+        .insight-card .ic-title { font-size: 0.65rem; }
+    }
 </style>
 """
     else:  # dark theme
@@ -664,6 +680,22 @@ def get_theme_css(theme: str = 'dark') -> str:
         font-size: 0.78rem; font-weight: 700; letter-spacing: 1.5px;
         text-transform: uppercase; color: rgba(148, 163, 184, 0.9);
         margin: 0.4rem 0 0.2rem 0;
+    }
+
+    /* Responsive Adjustments for Mobile */
+    @media (max-width: 768px) {
+        .main-header { font-size: 2.2rem; background-size: 300% auto; margin-top: 1rem; }
+        .sub-header { font-size: 0.95rem; margin-bottom: 1rem; padding: 0 10px; }
+        .badge { padding: 0.25rem 0.6rem; font-size: 0.7rem; margin: 0.2rem; }
+        .badge-row { margin-bottom: 1rem; }
+        [data-testid="stMetricValue"] { font-size: 1.1rem !important; }
+        .explanation-box { padding: 1rem; font-size: 0.85rem; margin-top: 0.4rem; }
+        .legend-card { padding: 0.8rem 1rem; font-size: 0.8rem; line-height: 1.6; }
+        .footer-text { padding: 1rem; font-size: 0.8rem; }
+        .insight-card { padding: 0.8rem 1rem; }
+        .insight-card .ic-value { font-size: 1.2rem; }
+        .insight-card .ic-icon { font-size: 1.1rem; }
+        .insight-card .ic-title { font-size: 0.65rem; }
     }
 </style>
 """
