@@ -115,7 +115,13 @@ def get_theme_css(theme: str = 'dark') -> str:
         letter-spacing: 0.5px;
         font-size: 0.72rem !important;
     }
-    [data-testid="stMetricValue"], [data-testid="stMetricValue"] > div {
+    [data-testid="stMetric"],
+    [data-testid="stMetric"] * {
+        white-space: normal !important;
+        overflow: visible !important;
+        text-overflow: unset !important;
+    }
+    [data-testid="stMetricValue"], [data-testid="stMetricValue"] * {
         white-space: normal !important;
         overflow: visible !important;
         overflow-wrap: break-word !important;
@@ -123,7 +129,7 @@ def get_theme_css(theme: str = 'dark') -> str:
         text-overflow: unset !important;
     }
     [data-testid="stMetricValue"] {
-        font-size: 1.35rem !important;
+        font-size: 1.2rem !important;
         font-weight: 800;
         line-height: 1.25;
         background: linear-gradient(135deg, #059669 0%, #0284c7 100%);
@@ -491,7 +497,13 @@ def get_theme_css(theme: str = 'dark') -> str:
         letter-spacing: 0.5px;
         font-size: 0.72rem !important;
     }
-    [data-testid="stMetricValue"], [data-testid="stMetricValue"] > div {
+    [data-testid="stMetric"],
+    [data-testid="stMetric"] * {
+        white-space: normal !important;
+        overflow: visible !important;
+        text-overflow: unset !important;
+    }
+    [data-testid="stMetricValue"], [data-testid="stMetricValue"] * {
         white-space: normal !important;
         overflow: visible !important;
         overflow-wrap: break-word !important;
@@ -499,7 +511,7 @@ def get_theme_css(theme: str = 'dark') -> str:
         text-overflow: unset !important;
     }
     [data-testid="stMetricValue"] {
-        font-size: 1.35rem !important;
+        font-size: 1.2rem !important;
         font-weight: 800;
         line-height: 1.25;
         background: linear-gradient(135deg, #34d399 0%, #38bdf8 100%);
